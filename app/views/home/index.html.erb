@@ -1,2 +1,44 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% if current_user %>
+
+<h3>Organization: <%= @tenant.name %></h3>
+
+<% else %>
+
+    <section class="section-jumbotron">
+      <div class="jumbotron section-jumbotron__container">
+        <h1 class="section-jumbotron__container-title">Saas Management App</h1>
+<!--         <p class="section-jumbotron__container-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate veritatis ad, deleniti harum reprehenderit recusandae sapiente, assumenda quasi placeat</p> -->
+      </div>
+    </section>
+
+    <section class="section-plan">
+      <div class="row">
+        <div class="col-sm-12 section-plan__container">
+
+          <div class="row">
+            <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-2 section-plan__plan-1">
+              <h2 class="section-plan__plan-1-title">Premium plan</h2>
+              <h3 class="section-plan__plan-1-price">only $ 10</h3>
+              <ul class="section-plan__plan-1-descp">
+                <li>Unlimited image upload</li>
+                <li>Responsive design</li>
+                <li>Access anywhere</li>
+              </ul>
+              <%= link_to "Buy now", new_user_registration_path, class: "btn btn-lg btn-info section-plan__plan-1-btn"%>
+            </div>
+            <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-0 section-plan__plan-2">
+              <h2 class="section-plan__plan-2-title">Amaze plan</h2>
+              <h3 class="section-plan__plan-2-price">only $ 20</h3>
+              <ul class="section-plan__plan-2-descp">
+                <li>Unlimited image upload</li>
+                <li>Responsive design</li>
+                <li>Access anywhere</li>
+                <li>Unlimited Projects</li>
+              </ul>
+              <%= link_to "Buy now", new_user_registration_path, class: "btn btn-lg btn-info section-plan__plan-2-btn"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<%end%>

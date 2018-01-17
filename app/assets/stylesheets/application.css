@@ -14,3 +14,18 @@
  *= require_tree .
  *= require_self
  */
+
+.nav>li>a:hover, 
+.nav>li>a:focus{
+  color: black !important;
+}
+
+.btn-sign-in{
+  margin-top:5px;
+}
+
+.no-left-padding{padding-left:0 !important}
+.no-right-padding{padding-right: 0!important}
+
+
+

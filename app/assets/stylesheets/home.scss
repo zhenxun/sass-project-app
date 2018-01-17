@@ -1,3 +1,112 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$navbar-default-bg: #fff;
+$color-black: #000;
+$color-white: #fff;
+
+.section-jumbotron{
+  padding: 2rem 1rem;
+  
+  &__container{
+    padding: 5rem 3rem;
+    border-radius:5px;
+    background-image: linear-gradient(to right bottom, rgba($color-black, .1), rgba($color-black, .5)), asset-url('vitor-santos-62290.jpg');
+    background-size:cover;
+    height:350px;
+    text-align:center;
+    position:relative;
+    
+    &-title{
+      color:$color-white !important;
+      opacity: 0.8;
+      position:absolute;
+      top:5px;
+      left: 20%;
+    }
+    
+    &-message{
+      color:rgba($color-white, 0.8);
+    }
+  }
+}
+
+.section-plan{
+  margin-bottom: 15px;
+  
+  &__container{
+    & > div{
+      text-align:center;
+    }    
+  }
+  
+  &__plan-1{
+    background-image:linear-gradient(to right bottom, #82E0AA, #58D68D);
+    margin-right:5px;
+    height: 370px;
+    border-radius: 5px;
+    color:$color-white;
+  }
+  
+  &__plan-1-title{
+    margin-bottom:20px;
+  }
+  
+  &__plan-1-price{
+    margin-bottom:20px;
+  }
+  
+  &__plan-1-descp{
+    list-style: none;
+    padding:0 !important;
+    font-size:16px !important;
+    
+    & > li:not(:last-child){
+      padding-bottom: 20px;
+    }
+    
+    & li:last-child{
+      padding-bottom:60px;
+    }
+  }
+  
+  &__plan-1-btn{
+    margin-bottom:20px;
+    background-color:#F0F3F4 !important;
+    color:$color-black !important;
+  }
+  
+  &__plan-2{
+    border-radius: 5px;
+    background-image:linear-gradient(to right bottom, #AED6F1, #5DADE2);
+    height:370px;
+    color:$color-white;
+    
+  }
+  
+  &__plan-2-title{
+    margin-bottom:20px;
+  }
+  
+  &__plan-2-price{
+    margin-bottom:20px;
+  }
+  
+  &__plan-2-descp{
+    list-style: none;
+    padding:0 !important;
+    font-size:16px !important;
+    
+    & > li{
+      padding-bottom: 20px;
+    }
+  }
+  
+  &__plan-2-btn{
+    margin-bottom:20px;
+    background-color:#F0F3F4 !important;
+    color:$color-black !important;
+  }
+  
+}
