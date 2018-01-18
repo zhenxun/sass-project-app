@@ -11,17 +11,17 @@
             <li><%= link_to "Link1", "/path1"  %></li>
             <li><%= link_to "Link2", "/path2"  %></li>
             <% if current_user %>
-            <li><%= link_to "<i class='fa fa-users'> Add Members".html_safe, new_member_path, class: 'navbar-link btn-btn-primary' %></li>
+            <li><%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path %></li>
             <% end %>
           </ul>
           <ul class="nav navbar-right col-md-4">
                <% if current_user %>
                <li class="col-md-8 user-name text-right">
-                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile', class: 'btn-profile' %>
                </li>
                <li class="col-md-1">&nbsp;</li>
                <li class="col-md-3 logout">
-                  <%= link_to("logout", destroy_user_session_path, class: "btn btn-xs btn-danger btn-log-out", title: 'Logout', method: :delete) %>
+                  <%= link_to("Log out", destroy_user_session_path, class: "btn btn-xs btn-danger btn-log-out", title: 'Logout', method: :delete) %>
                </li>
                <% else %>
                   <li class="col-md-4 pull-right">

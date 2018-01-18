@@ -1,4 +1,4 @@
-class ConfirmationsController < Milla:ConfirmationsController
+class ConfirmationsController < Milia::ConfirmationsController
   
   def update
     if @confirmable.attempt_set_password(user_params)
@@ -32,12 +32,12 @@ class ConfirmationsController < Milla:ConfirmationsController
        @confirmable.skip_confirm_change_password
 
       log_action( "devise pass-thru" )
-      self.resuorce = resource_class.confirm_by_token(params[:confirmation_token])
+      self.resource = resource_class.confirm_by_token(params[:confirmation_token])
       
       yield resuorce if block_given?
       
       if resource.errors.empty?
-        set_flash_message(:notice, :confirmed) if_flashing_format?
+        set_flash_message(:notice, :confirmed) if is_flashing_format?
       end
         
       if @confirmable.skip_confirm_change_password

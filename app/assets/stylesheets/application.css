@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require devise_bootstrap_views
+ *= require bootstrap-datepicker3
  *= require_tree .
  *= require_self
  */
@@ -26,6 +27,15 @@
 
 .no-left-padding{padding-left:0 !important}
 .no-right-padding{padding-right: 0!important}
+
+.btn-profile{
+  margin-top: 5px;
+}
+
+.btn-log-out{
+  margin-top:5px;
+  padding:10px 10px !important;
+}
 
 
 
