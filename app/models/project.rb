@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
+  # dependent: :destroy mean if project delete then artifacts also delete all
+  has_many :artifacts, dependent: :destroy
   validates_uniqueness_of :title
   #custome validated function
   validate :free_plan_can_only_have_one_project  

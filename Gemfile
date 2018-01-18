@@ -5,12 +5,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 
+gem 'figaro'
 gem 'pg', '~> 0.15'
 gem 'devise'
 gem 'milia', '~> 1.2'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+gem 'aws-sdk'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
