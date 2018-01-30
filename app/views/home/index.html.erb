@@ -19,17 +19,17 @@
 
           <div class="row">
             <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-2 section-plan__plan-1">
-              <h2 class="section-plan__plan-1-title">Premium plan</h2>
+              <h2 class="section-plan__plan-1-title">Free plan</h2>
               <h3 class="section-plan__plan-1-price">only $ 10</h3>
               <ul class="section-plan__plan-1-descp">
                 <li>Unlimited image upload</li>
                 <li>Responsive design</li>
                 <li>Access anywhere</li>
               </ul>
-              <%= link_to "Buy now", new_user_registration_path, class: "btn btn-lg btn-info section-plan__plan-1-btn"%>
+              <%= link_to "Buy now", new_user_registration_path(:plan => 'free' ), class: "btn btn-lg btn-info section-plan__plan-1-btn"%>
             </div>
             <div class="col-xs-6 col-md-4 col-xs-offset-3 col-md-offset-0 section-plan__plan-2">
-              <h2 class="section-plan__plan-2-title">Amaze plan</h2>
+              <h2 class="section-plan__plan-2-title">Premium plan</h2>
               <h3 class="section-plan__plan-2-price">only $ 20</h3>
               <ul class="section-plan__plan-2-descp">
                 <li>Unlimited image upload</li>
@@ -37,7 +37,7 @@
                 <li>Access anywhere</li>
                 <li>Unlimited Projects</li>
               </ul>
-              <%= link_to "Buy now", new_user_registration_path, class: "btn btn-lg btn-info section-plan__plan-2-btn"%>
+              <%= link_to "Buy now", new_user_registration_path(:plan => 'premium'), class: "btn btn-lg btn-info section-plan__plan-2-btn"%>
             </div>
           </div>
         </div>
